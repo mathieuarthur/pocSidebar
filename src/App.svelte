@@ -7,17 +7,19 @@
 		visible = !visible
 	}
 </script>
-<div class="container">
-		{#if visible}
-			<div class="burger" on:mouseover={toggleVisible} on:focus={toggleVisible} transition:fade>
-				<div></div>
-				<div></div>
-				<div></div>
-			</div>
-		{/if}
 
+<main>
+	<div class="container">
+		{#if visible}
+		<div class="burger" on:mouseover={toggleVisible} on:focus={toggleVisible} transition:fade>
+			<div></div>
+			<div></div>
+			<div></div>
+		</div>
+		{/if}
+		
 		<div class={`sidebar ${visible ? "hidden" : ""}`} on:mouseout={toggleVisible} on:blur={toggleVisible} transition:fade> 
-			<ul>
+			<ul class="unselectable">
 				<li>tes</li>
 				<li>dsqdqs</li>
 				<li>dsqdqs</li>
@@ -25,6 +27,7 @@
 			</ul>
 		</div>
 	</div>
+</main>
 
 <style>
 	.container
