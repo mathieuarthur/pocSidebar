@@ -632,41 +632,36 @@ var app = (function () {
 
     // (11:2) {#if visible}
     function create_if_block(ctx) {
-    	let div4;
     	let div3;
     	let div0;
     	let t0;
     	let div1;
     	let t1;
     	let div2;
-    	let div4_transition;
+    	let div3_transition;
     	let current;
     	let mounted;
     	let dispose;
 
     	const block = {
     		c: function create() {
-    			div4 = element("div");
     			div3 = element("div");
     			div0 = element("div");
     			t0 = space();
     			div1 = element("div");
     			t1 = space();
     			div2 = element("div");
-    			attr_dev(div0, "class", "svelte-1svz785");
-    			add_location(div0, file, 13, 5, 295);
-    			attr_dev(div1, "class", "svelte-1svz785");
-    			add_location(div1, file, 14, 5, 312);
-    			attr_dev(div2, "class", "svelte-1svz785");
-    			add_location(div2, file, 15, 5, 329);
-    			attr_dev(div3, "class", "burger svelte-1svz785");
-    			add_location(div3, file, 12, 4, 269);
-    			attr_dev(div4, "class", "Test");
-    			add_location(div4, file, 11, 3, 180);
+    			attr_dev(div0, "class", "svelte-1d64whd");
+    			add_location(div0, file, 12, 4, 275);
+    			attr_dev(div1, "class", "svelte-1d64whd");
+    			add_location(div1, file, 13, 4, 291);
+    			attr_dev(div2, "class", "svelte-1d64whd");
+    			add_location(div2, file, 14, 4, 307);
+    			attr_dev(div3, "class", "burger svelte-1d64whd");
+    			add_location(div3, file, 11, 3, 180);
     		},
     		m: function mount(target, anchor) {
-    			insert_dev(target, div4, anchor);
-    			append_dev(div4, div3);
+    			insert_dev(target, div3, anchor);
     			append_dev(div3, div0);
     			append_dev(div3, t0);
     			append_dev(div3, div1);
@@ -676,8 +671,8 @@ var app = (function () {
 
     			if (!mounted) {
     				dispose = [
-    					listen_dev(div4, "mouseover", /*toggleVisible*/ ctx[1], false, false, false),
-    					listen_dev(div4, "focus", focus_handler, false, false, false)
+    					listen_dev(div3, "mouseover", /*toggleVisible*/ ctx[1], false, false, false),
+    					listen_dev(div3, "focus", /*toggleVisible*/ ctx[1], false, false, false)
     				];
 
     				mounted = true;
@@ -688,20 +683,20 @@ var app = (function () {
     			if (current) return;
 
     			add_render_callback(() => {
-    				if (!div4_transition) div4_transition = create_bidirectional_transition(div4, fade, {}, true);
-    				div4_transition.run(1);
+    				if (!div3_transition) div3_transition = create_bidirectional_transition(div3, fade, {}, true);
+    				div3_transition.run(1);
     			});
 
     			current = true;
     		},
     		o: function outro(local) {
-    			if (!div4_transition) div4_transition = create_bidirectional_transition(div4, fade, {}, false);
-    			div4_transition.run(0);
+    			if (!div3_transition) div3_transition = create_bidirectional_transition(div3, fade, {}, false);
+    			div3_transition.run(0);
     			current = false;
     		},
     		d: function destroy(detaching) {
-    			if (detaching) detach_dev(div4);
-    			if (detaching && div4_transition) div4_transition.end();
+    			if (detaching) detach_dev(div3);
+    			if (detaching && div3_transition) div3_transition.end();
     			mounted = false;
     			run_all(dispose);
     		}
@@ -731,6 +726,7 @@ var app = (function () {
     	let t6;
     	let li3;
     	let div0_class_value;
+    	let div0_transition;
     	let current;
     	let mounted;
     	let dispose;
@@ -754,15 +750,15 @@ var app = (function () {
     			t6 = space();
     			li3 = element("li");
     			li3.textContent = "fgsdgfd";
-    			add_location(li0, file, 22, 4, 484);
-    			add_location(li1, file, 23, 4, 501);
-    			add_location(li2, file, 24, 4, 521);
-    			add_location(li3, file, 25, 4, 541);
-    			attr_dev(ul, "class", "svelte-1svz785");
-    			add_location(ul, file, 21, 3, 475);
-    			attr_dev(div0, "class", div0_class_value = "" + (null_to_empty(`sidebar ${/*visible*/ ctx[0] ? "hidden" : ""}`) + " svelte-1svz785"));
-    			add_location(div0, file, 20, 2, 373);
-    			attr_dev(div1, "class", "container svelte-1svz785");
+    			add_location(li0, file, 20, 4, 472);
+    			add_location(li1, file, 21, 4, 489);
+    			add_location(li2, file, 22, 4, 509);
+    			add_location(li3, file, 23, 4, 529);
+    			attr_dev(ul, "class", "svelte-1d64whd");
+    			add_location(ul, file, 19, 3, 463);
+    			attr_dev(div0, "class", div0_class_value = "" + (null_to_empty(`sidebar ${/*visible*/ ctx[0] ? "hidden" : ""}`) + " svelte-1d64whd"));
+    			add_location(div0, file, 18, 2, 340);
+    			attr_dev(div1, "class", "container svelte-1d64whd");
     			add_location(div1, file, 9, 0, 137);
     		},
     		l: function claim(nodes) {
@@ -786,7 +782,7 @@ var app = (function () {
     			if (!mounted) {
     				dispose = [
     					listen_dev(div0, "mouseout", /*toggleVisible*/ ctx[1], false, false, false),
-    					listen_dev(div0, "blur", blur_handler, false, false, false)
+    					listen_dev(div0, "blur", /*toggleVisible*/ ctx[1], false, false, false)
     				];
 
     				mounted = true;
@@ -816,22 +812,31 @@ var app = (function () {
     				check_outros();
     			}
 
-    			if (!current || dirty & /*visible*/ 1 && div0_class_value !== (div0_class_value = "" + (null_to_empty(`sidebar ${/*visible*/ ctx[0] ? "hidden" : ""}`) + " svelte-1svz785"))) {
+    			if (!current || dirty & /*visible*/ 1 && div0_class_value !== (div0_class_value = "" + (null_to_empty(`sidebar ${/*visible*/ ctx[0] ? "hidden" : ""}`) + " svelte-1d64whd"))) {
     				attr_dev(div0, "class", div0_class_value);
     			}
     		},
     		i: function intro(local) {
     			if (current) return;
     			transition_in(if_block);
+
+    			add_render_callback(() => {
+    				if (!div0_transition) div0_transition = create_bidirectional_transition(div0, fade, {}, true);
+    				div0_transition.run(1);
+    			});
+
     			current = true;
     		},
     		o: function outro(local) {
     			transition_out(if_block);
+    			if (!div0_transition) div0_transition = create_bidirectional_transition(div0, fade, {}, false);
+    			div0_transition.run(0);
     			current = false;
     		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(div1);
     			if (if_block) if_block.d();
+    			if (detaching && div0_transition) div0_transition.end();
     			mounted = false;
     			run_all(dispose);
     		}
@@ -847,9 +852,6 @@ var app = (function () {
 
     	return block;
     }
-
-    const focus_handler = () => null;
-    const blur_handler = () => null;
 
     function instance($$self, $$props, $$invalidate) {
     	let { $$slots: slots = {}, $$scope } = $$props;

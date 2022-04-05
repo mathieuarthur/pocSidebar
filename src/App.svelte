@@ -9,16 +9,14 @@
 </script>
 <div class="container">
 		{#if visible}
-			<div on:mouseover={toggleVisible} on:focus={()=>null} class="Test" transition:fade> 
-				<div class="burger">
-					<div></div>
-					<div></div>
-					<div></div>
-				</div>
+			<div class="burger" on:mouseover={toggleVisible} on:focus={toggleVisible} transition:fade>
+				<div></div>
+				<div></div>
+				<div></div>
 			</div>
 		{/if}
 
-		<div class={`sidebar ${visible ? "hidden" : ""}`} on:mouseout={toggleVisible} on:blur={()=>null}> 
+		<div class={`sidebar ${visible ? "hidden" : ""}`} on:mouseout={toggleVisible} on:blur={toggleVisible} transition:fade> 
 			<ul>
 				<li>tes</li>
 				<li>dsqdqs</li>
@@ -64,11 +62,11 @@
 		background-color: green;
 		position: absolute;
 		left: 0px;
-		transition: all 1s;
+		transition: all 1s ease;
 	}
 	.sidebar.hidden
 	{
-		transition: all 1s;
+		transition: all 1s ease;
 		left: -100px;
 	}
 </style>
